@@ -1,0 +1,22 @@
+const userNumberLow = parseFloat( prompt("Please provide a low number:") );
+const userNumberHigh = parseFloat( prompt("Please provide a high number:") );
+
+// Convert the input to a number
+
+// Use Math.random() and the user's number to generate a random number
+
+let randomNumber = Math.floor( Math.random() * userNumberHigh ) + 1;
+
+// Create a message displaying the random number
+
+if (randomNumber >= userNumberLow) {
+  alert(`${randomNumber} is a number between ${userNumberLow} and ${userNumberHigh}.`);
+} else if (randomNumber < userNumberLow) {
+  do {
+    randomNumber = Math.floor( Math.random() * userNumberHigh ) + 1;
+  }
+  while (randomNumber < userNumberLow);  
+  alert(`${randomNumber} is a number between ${userNumberLow} and ${userNumberHigh}.`);
+} else {
+ alert("Please provide numbers."); 
+}
